@@ -1,5 +1,7 @@
 Photogenic::Application.routes.draw do
-  root to: 'home#index'
+  resources :contents
 
   get "home/index"
+
+  root to: 'home#index'
 end
