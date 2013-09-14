@@ -7,10 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+	<h1 id="logo"><%= link_to image_tag 'logo.png' '/' %></h1>
+</header>
 <div id="wrapper">
-	<header>
-		<h1 id="logo"></h1>
-	</header>
 	<article id="contentArea">
 <%= yield %>
 	</article><!-- /#contentArea -->
