@@ -11,16 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130914104632) do
+ActiveRecord::Schema.define(version: 20130914102602) do
 
   create_table "contents", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "name"
     t.string   "category"
     t.string   "mime"
-    t.binary   "body"
     t.date     "last_accessed_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
