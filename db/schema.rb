@@ -14,14 +14,6 @@
 ActiveRecord::Schema.define(version: 20130914102602) do
 
   create_table "contents", force: true do |t|
-    t.string   "name"
-    t.string   "category"
-    t.string   "mime"
-    t.string   "body_file_name"
-    t.string   "body_content_type"
-    t.integer  "body_file_size"
-    t.datetime "body_updated_at"
-    t.date     "last_accessed_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
