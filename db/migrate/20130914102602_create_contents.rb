@@ -4,7 +4,7 @@ class CreateContents < ActiveRecord::Migration
       t.string            :name
       t.string            :category
       t.string            :mime
-      # t.has_attached_file :body
+      t.has_attached_file :body
       t.date              :last_accessed_at
 
       t.timestamps
