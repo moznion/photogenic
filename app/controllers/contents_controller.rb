@@ -26,6 +26,8 @@ class ContentsController < ApplicationController
   def create
     @content = Content.new(content_params)
 
+    @content.last_accessed_at = @content.body_updated_at
+    @content.name             = @content.body.path.split('/')[-1]
     respond_to do |format|
       if @content.save
         format.html { redirect_to @content, notice: 'Content was successfully created.' }
