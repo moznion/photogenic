@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div id="wrapper">
+	<header>
+		<h1 id="logo"></h1>
+	</header>
+	<article id="contentArea">
 <%= yield %>
-
+	</article><!-- /#contentArea -->
+</div><!-- /#wrapper -->
+<footer>
+	<p id="copy">Copyright &copy; 2013 photogenic All Rights Reserved.</p>
+</footer>
 </body>
 </html>
