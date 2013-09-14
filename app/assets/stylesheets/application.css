@@ -174,7 +174,13 @@ a:focus {
 *{
 	color:#3c3c3c;
 }
-
+html,body{
+	height: 100%;
+}
+#footbottomWrap{
+	min-height: 100%;
+	position: relative;
+}
 #wrapper{
 	width: 1000px;
 	margin: 0 auto;
@@ -212,6 +218,7 @@ header h1 a img{
 /* #contentArea style */
 #contentArea{
 	margin-bottom: 30px;
+	padding-bottom: 50px;
 }
 /* end #contentArea style */
 
@@ -221,7 +228,7 @@ footer{
 	width:100%;
 	height: 50px;
 	text-align: center;
-	position: relative;
+	position: absolute;
 	bottom: 0;
 }
 footer p{
