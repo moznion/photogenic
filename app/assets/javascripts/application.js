@@ -23,6 +23,7 @@ $(function(){
 		url: "contents/new",
 		parallelUploads:1,
 		maxFilesize:5,
-		clickable:true
+		clickable:true,
+
 	});
 });
