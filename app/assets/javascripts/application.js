@@ -13,4 +13,16 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require dropzone
 //= require_tree .
+
+$(function(){
+	//dropzone 設定
+	$(".new_content").addClass("dropzone-custom");
+	$("div#dropArea").dropzone({
+		url: "contents/new",
+		parallelUploads:1,
+		maxFilesize:5,
+		clickable:true
+	});
+});
