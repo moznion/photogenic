@@ -1,5 +1,13 @@
-<h1>New content</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', contents_path %>
+<section id="tutorialArea">
+</section><!-- /#tutorialArea -->
+<section id="uploadArea">
+  <%= form_for @content do |f| %>
+    <div class="body">
+      <%= f.label :body %>
+      <%= f.file_field :body %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+</section><!-- /#uploadArea -->
