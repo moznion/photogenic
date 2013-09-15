@@ -8,7 +8,7 @@ class Content < ActiveRecord::Base
 
   validates_attachment :body,
     presence: true,
-    content_type: { content_type: ["image/jpg", "image/png"] },
+    content_type: { content_type: ["image/jpeg", "image/png"] },
     size: { less_than: 5.megabytes }
 
 end
