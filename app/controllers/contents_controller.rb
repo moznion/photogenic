@@ -11,6 +11,8 @@ class ContentsController < ApplicationController
   # GET /contents/1.json
   def show
     @content = Content.find(:first, conditions: {name: params[:id]})
+    @content.last_accessed_at = Time.now
+    @content.save # Error handling はそこまで重要ではないので省略. 後で必要になったら考える
   end
 
   # GET /contents/new
@@ -28,7 +30,9 @@ class ContentsController < ApplicationController
     @content = Content.new(content_params)
 
     @content.last_accessed_at = @content.body_updated_at
-    @content.name             = @content.body.path.split('/')[-1].split('.')[0]
+
+    (@content.name, @content.extension) = @content.body.path.split('/')[-1].split('.')
+
     respond_to do |format|
       if @content.save
         format.html { redirect_to action: 'show', id: @content.name }
