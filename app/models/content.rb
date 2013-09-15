@@ -1,14 +1,31 @@
 class Content < ActiveRecord::Base
   attr_accessor :body
 
+  validate :check_presence
+  validate :check_content_type
+  validate :check_file_size
+
   has_attached_file :body, {
     path: ":rails_root/public/sys_img/:id_sha1.:extension",
     url:  "#{ActionController::Base.relative_url_root}/sys_img/:id_sha1.:extension"
   }
 
-  validates_attachment :body,
-    presence: true,
-    content_type: { content_type: ["image/jpeg", "image/png", "image/gif"] },
-    size: { less_than: 5.megabytes }
+  private
+  def check_presence
+    unless self.body_file_name
+      errors.add(:content, "ファイルを指定してください")
+    end
+  end
 
+  def check_content_type
+    if !['image/jpeg', 'image/gif','image/png'].include?(self.body_content_type)
+      errors.add(:content_type, "'jpeg', 'gif', 'png' 以外のファイルはアップロード出来ません")
+    end
+  end
+
+  def check_file_size
+    if self.body_file_size > 1024 * 5
+      errors.add(:content_size, "5MBを超えるファイルはアップロード出来ません")
+    end
+  end
 end

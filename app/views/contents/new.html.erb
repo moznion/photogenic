@@ -9,6 +9,17 @@
       <%= f.file_field :body, :id=>'uploadFile' %>
     </div>
     <%= flash[:error] %> <!-- TODO デザイン考える -->
+
+    <% if @content.errors.any? %>
+      <div id="error_explanation">
+        <ul>
+          <% @content.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
     <div class="actions">
       <%= f.submit :value=>'選択した写真を追加する', :id=>'uploadSubmit' %>
     </div>
