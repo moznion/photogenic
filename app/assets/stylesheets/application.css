@@ -201,6 +201,8 @@ header h1{
 	margin: 0 auto;
 }
 header h1 a{
+	display: inline-block;
+	height: 60px;
 	line-height: 60px !important;
 	border: none !important;
 }

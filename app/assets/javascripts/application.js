@@ -28,7 +28,12 @@ $(function(){
 	);
 	/* $(".new_content").addClass("dropzone-custom"); */
 
-	$("#tutorialArea img").fadeIn(2000);
+	$("#tutorialArea img").hide();
+	$("#tutorialArea img").fadeTo(2000,1);
+
+	$("#logo a").click(function(){
+		$("#tutorialArea img").fadeIn(2000);
+	});
 	//ドロップゾーン　ここから
 
 	//ドロップゾーン　ここまで
