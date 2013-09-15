@@ -1,5 +1,5 @@
 class ContentsController < ApplicationController
-  before_action :set_content, only: [:show, :edit, :update, :destroy]
+  before_action :set_content, only: [:edit, :update, :destroy]
 
   # GET /contents
   # GET /contents.json
@@ -10,6 +10,7 @@ class ContentsController < ApplicationController
   # GET /contents/1
   # GET /contents/1.json
   def show
+    @content = Content.find(:first, conditions: {name: params[:id] << '.' << params[:format]})
   end
 
   # GET /contents/new
@@ -30,7 +31,7 @@ class ContentsController < ApplicationController
     @content.name             = @content.body.path.split('/')[-1]
     respond_to do |format|
       if @content.save
-        format.html { redirect_to @content, notice: 'Content was successfully created.' }
+        format.html { render action: 'show' }
         format.json { render action: 'show', status: :created, location: @content }
       else
         format.html { render action: 'new' }
