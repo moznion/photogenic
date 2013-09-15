@@ -12,7 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+<<<<<<< HEAD
 
+=======
+>>>>>>> c8011eacc5263c8001e2ec48c16ae6984e10c607
 //= require dropzone
 //= require_tree .
 
@@ -34,7 +37,16 @@ $(function(){
 	$("#t_winner").delay(4500).fadeTo(1000,1);
 	$("#t_lose").delay(5500).fadeTo(1000,1);
 
+	$("#uploadSubmit,#back a").hover(
+		function(){
+			$(this).fadeTo(100,0.6);
+		},
+		function(){
+			$(this).fadeTo(100,1);
+		}
+	);
 
+<<<<<<< HEAD
 	/*
 	$("#tutorialArea img").hide();
 	$("#tutorialArea img").fadeTo(2000,1);
@@ -43,4 +55,8 @@ $(function(){
 		$("#tutorialArea img").fadeIn(2000);
 	});
 	*/
+=======
+	$("#spTutorialArea img").hide();
+	$("#spTutorialArea img").fadeTo(1000,1);
+>>>>>>> c8011eacc5263c8001e2ec48c16ae6984e10c607
 });

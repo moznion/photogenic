@@ -19,9 +19,12 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+<<<<<<< HEAD
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'
 
+=======
+>>>>>>> c8011eacc5263c8001e2ec48c16ae6984e10c607
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
@@ -31,11 +34,20 @@ gem 'paperclip'
 # For batch
 gem 'whenever', :require => false
 
+# Application server
+gem 'unicorn'
+
+# Deploy with Capistrano
+gem 'capistrano'
+
+gem 'mysql2'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
 group :development, :test do
+  gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 2.0'
 end
