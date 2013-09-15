@@ -71,6 +71,7 @@ GEM
     mime-types (1.25)
     minitest (4.7.5)
     multi_json (1.8.0)
+    mysql2 (0.3.13)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -140,8 +141,6 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (1.3.0)
-      coffee-rails
     tzinfo (0.3.37)
     uglifier (2.2.1)
       execjs (>= 0.3.0)
@@ -163,6 +162,7 @@ DEPENDENCIES
   factory_girl_rails
   jbuilder (~> 1.2)
   jquery-rails
+  mysql2
   paperclip
   rails (= 4.0.0)
   rake
@@ -170,7 +170,6 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   sdoc
   sqlite3
-  turbolinks
   uglifier (>= 1.3.0)
   unicorn
   whenever
