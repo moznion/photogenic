@@ -7,6 +7,7 @@
 <div class="body">
       <%= f.file_field :body, :id=>'uploadFile' %>
     </div>
+    <%= flash[:error] %> <!-- TODO デザイン考える -->
     <div class="actions">
       <%= f.submit :value=>'選択した写真を追加する', :id=>'uploadSubmit' %>
     </div>

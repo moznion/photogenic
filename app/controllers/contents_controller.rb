@@ -35,7 +35,15 @@ class ContentsController < ApplicationController
   # POST /contents
   # POST /contents.json
   def create
-    @content = Content.new(content_params)
+    begin
+      @content = Content.new(content_params)
+    rescue
+      # パラメータ足りない (ファイル指定されてない) 場合の処理
+      respond_to do |format|
+        format.html { redirect_to :root, :flash => {:error => "ファイルを指定して下さい"} }
+      end
+      return
+    end
 
     @content.last_accessed_at = @content.body_updated_at
 
