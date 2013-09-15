@@ -8,7 +8,9 @@
 <div class="body">
       <%= f.file_field :body, :id=>'uploadFile' %>
     </div>
-    <%= flash[:error] %> <!-- TODO デザイン考える -->
+	    <% if flash[:error] %>
+	    <div id="noselect"><%= flash[:error] %></div><!-- /#noselect -->
+		<% end %>
 
     <% if @content.errors.any? %>
       <div id="error_explanation">

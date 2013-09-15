@@ -26,10 +26,7 @@
 	margin-bottom: 20px;
 }
 #uploadFile{
-/*
-	width: 100%;
-	height: 100%;
-*/
+	margin-left: 30px;
 }
 .actions{
 	width: 100%;
@@ -43,4 +40,38 @@
 	color:#fff;
 	background: #3498DB;
 	font-size: 15px;
+}
+
+/* Errorのスタイル */
+#noselect{
+	margin-bottom: 20px;
+	max-height: 50px;
+	width: 200px;
+	margin: 0 auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	background: #ffa1a1;
+}
+#error_explanation{
+	width: 500px;
+	margin: 0 auto;
+	border:none !important;
+	border-radius: 10px !important;
+	background: #ffa1a1 !important;
+}
+#error_explanation ul{
+	list-style: none;
+	height: 30px;
+	padding: 0 !important;
+}
+#error_explanation ul li{
+	width: 100% !important;
+	height: 30px !important;
+	line-height: 30px !important;
+	text-align: center !important;
+	list-style: none !important;
+	list-style-position: inside !important;
 }
