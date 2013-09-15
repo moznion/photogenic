@@ -1,3 +1,6 @@
+# photogenic [![Build Status](https://travis-ci.org/moznion/photogenic.png?branch=master)](https://travis-ci.org/moznion/photogenic)
+blah, blah
+
 # Getting started (For developer)
 
 1. Install dependencies

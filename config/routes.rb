@@ -1,5 +1,5 @@
 Photogenic::Application.routes.draw do
-  resources :contents, only: ['create', 'show']
+  resources :contents, only: ['new', 'create', 'show']
 
   root to: 'contents#new'
 end
