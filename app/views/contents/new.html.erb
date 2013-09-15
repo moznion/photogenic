@@ -3,15 +3,12 @@
 </section><!-- /#tutorialArea -->
 <section id="uploadArea">
   <%= form_for @content do |f| %>
-  	<div id="dropArea">アップロードする写真をドロップしてください</div><!-- /#dropArea -->
 
-    <!-- ドロップゾーン用にコメントアウト
 <div class="body">
       <%= f.file_field :body, :id=>'uploadFile' %>
     </div>
     <div class="actions">
       <%= f.submit :value=>'選択した写真を追加する', :id=>'uploadSubmit' %>
     </div>
--->
   <% end %>
 </section><!-- /#uploadArea -->
