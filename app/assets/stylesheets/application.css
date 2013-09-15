@@ -239,3 +239,36 @@ footer p{
 	line-height: 50px;
 }
 /* end footer style */
+
+@media screen and (max-width: 600px) {
+	#wrapper{
+		width: 96%;
+		margin: 0 2%;
+	}
+	header h1{
+		width: 96%;
+		margin: 0 2%;
+	}
+	#contentArea{
+		width: 100%;
+		padding-bottom: 50px;
+	}
+	#footbottomWrap{
+		min-height: 100%;
+		height: 100%;
+		position: relative;
+	}
+	footer{
+		background-color:#6c6c6c;
+		height: 50px;
+		text-align: center;
+		position: relative;
+		bottom: 0;
+	}
+	footer p{
+		color:#ffffff !important;
+		line-height: normal;
+		padding-top: 19px;
+		font-size: 10px;
+	}
+}
