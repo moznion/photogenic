@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130915051702) do
+ActiveRecord::Schema.define(version: 20130915072613) do
 
   create_table "contents", force: true do |t|
     t.string   "name"
@@ -24,5 +24,8 @@ ActiveRecord::Schema.define(version: 20130915051702) do
     t.datetime "updated_at"
     t.string   "extension"
   end
+
+  add_index "contents", ["last_accessed_at"], name: "index_contents_on_last_accessed_at"
+  add_index "contents", ["name"], name: "index_contents_on_name"
 
 end
