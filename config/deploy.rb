@@ -93,7 +93,7 @@ namespace :nginx do
 
     eruby = Erubis::Eruby.load_file config_path
     put eruby.evaluate(project_name: application),
-        "/usr/local/nginx/sites-available/#{application}.conf"
+        "/usr/local/nginx/conf/sites-available/#{application}.conf"
   end
 end
 
