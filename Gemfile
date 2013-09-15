@@ -28,6 +28,9 @@ gem 'jbuilder', '~> 1.2'
 # Upload images
 gem 'paperclip'
 
+# For batch
+gem 'whenever', :require => false
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
