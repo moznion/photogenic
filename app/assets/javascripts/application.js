@@ -42,12 +42,6 @@ $(function(){
 		}
 	);
 
-	/*
-	$("#tutorialArea img").hide();
-	$("#tutorialArea img").fadeTo(2000,1);
-
-	$("#logo a").click(function(){
-		$("#tutorialArea img").fadeIn(2000);
-	});
-	*/
+	$("#spTutorialArea img").hide();
+	$("#spTutorialArea img").fadeTo(1000,1);
 });
