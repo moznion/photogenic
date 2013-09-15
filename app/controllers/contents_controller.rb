@@ -10,9 +10,17 @@ class ContentsController < ApplicationController
   # GET /contents/1
   # GET /contents/1.json
   def show
-    @content = Content.find(:first, conditions: {name: params[:id]})
-    @content.last_accessed_at = Time.now
-    @content.save # Error handling はそこまで重要ではないので省略. 後で必要になったら考える
+    begin
+      @content = Content.where(["name = ?", params[:id]]).first!
+      @content.last_accessed_at = Time.now
+      @content.save # Error handling はそこまで重要ではないので省略. 後で必要になったら考える
+
+      respond_to do |format|
+        format.html
+      end
+    rescue
+      # 404
+    end
   end
 
   # GET /contents/new
