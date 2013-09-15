@@ -1,11 +1,47 @@
 #tutorialArea{
 	width: 100%;
+	height: 300px !important;
+	overflow: hidden;
 	margin-top: 40px;
 	margin-bottom: 60px;
+	display: inline-block;
 }
 #tutorialArea img{
-	width: 1000px;
-	height: 300px;
+	opacity: 0;
+	position: relative;
+}
+#t_title{
+	top: -120px !important;
+	left: 0px !important;
+	z-index: 1;
+}
+#t_take{
+	top:75px !important;
+	left: -580px !important;
+	z-index: 2;
+}
+#t_upload{
+	top:-90px !important;
+	left: 210px !important;
+	z-index: 3;
+}
+#t_finishing{
+
+	top:-115px !important;
+	left: 230px !important;
+	z-index: 4;
+}
+#t_winner{
+
+	top:-230px !important;
+	left: 250px !important;
+	z-index: 5;
+}
+#t_lose{
+
+	top:-100px !important;
+	left: 10px !important;
+	z-index: 6;
 }
 /*
 

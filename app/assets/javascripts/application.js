@@ -17,7 +17,7 @@
 //= require_tree .
 
 $(function(){
-	//dropzone 設定
+	//ロゴ 設定
 	$("#logo a img").hover(
 		function(){
 			$(this).fadeTo(100,0.6);
@@ -26,26 +26,21 @@ $(function(){
 			$(this).fadeTo(100,1);
 		}
 	);
-	/* $(".new_content").addClass("dropzone-custom"); */
 
+	$("#t_title").fadeTo(500,1);
+	$("#t_take").delay(1500).fadeTo(1000,1);
+	$("#t_upload").delay(2500).fadeTo(1000,1);
+	$("#t_finishing").delay(3500).fadeTo(1000,1);
+	$("#t_winner").delay(4500).fadeTo(1000,1);
+	$("#t_lose").delay(5500).fadeTo(1000,1);
+
+
+	/*
 	$("#tutorialArea img").hide();
 	$("#tutorialArea img").fadeTo(2000,1);
 
 	$("#logo a").click(function(){
 		$("#tutorialArea img").fadeIn(2000);
 	});
-	//ドロップゾーン　ここから
-
-	//ドロップゾーン　ここまで
-
-	/*
-$(".dropzone-custom").hover(
-		function(){
-			$(this).css({"background":"#dcdcdc"},200);
-	},
-		function(){
-			$(this).css({"background":"#FFFFFF"},200);
-		}
-	);
-*/
+	*/
 });
