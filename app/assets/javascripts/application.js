@@ -26,14 +26,15 @@ $(function(){
 			$(this).fadeTo(100,1);
 		}
 	);
-	$(".new_content").addClass("dropzone-custom");
+	/* $(".new_content").addClass("dropzone-custom"); */
 
-
+	$("#tutorialArea img").fadeIn(2000);
 	//ドロップゾーン　ここから
 
 	//ドロップゾーン　ここまで
 
-	$(".dropzone-custom").hover(
+	/*
+$(".dropzone-custom").hover(
 		function(){
 			$(this).css({"background":"#dcdcdc"},200);
 	},
@@ -41,4 +42,5 @@ $(function(){
 			$(this).css({"background":"#FFFFFF"},200);
 		}
 	);
+*/
 });
