@@ -12,15 +12,21 @@
 	margin: 0 auto;
 	height: 50px;
 	line-height: 50px;
+	padding: 70px;
 }
 #info{
 	text-align: center;
 	font-size: 15px;
+	display: inline-block;
 	margin-bottom: 20px;
 }
 #twitter{
+	height: 100%;
 	float: left;
+	display: inline-block;
 }
 #fb{
+	height: 100%;
 	float: left;
+	display: inline-block;
 }

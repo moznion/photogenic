@@ -221,6 +221,7 @@ header h1 a img{
 #contentArea{
 	margin-bottom: 30px;
 	padding-bottom: 50px;
+	height: 100%;
 }
 /* end #contentArea style */
 
