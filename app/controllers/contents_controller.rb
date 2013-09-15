@@ -11,6 +11,8 @@ class ContentsController < ApplicationController
   # GET /contents/1.json
   def show
     @content = Content.find(:first, conditions: {name: params[:id]})
+    @content.last_accessed_at = Time.now
+    @content.save # Error handling はそこまで重要ではないので省略. 後で必要になったら考える
   end
 
   # GET /contents/new
