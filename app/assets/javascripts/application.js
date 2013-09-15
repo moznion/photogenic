@@ -34,6 +34,14 @@ $(function(){
 	$("#t_winner").delay(4500).fadeTo(1000,1);
 	$("#t_lose").delay(5500).fadeTo(1000,1);
 
+	$("#uploadSubmit,#back a").hover(
+		function(){
+			$(this).fadeTo(100,0.6);
+		},
+		function(){
+			$(this).fadeTo(100,1);
+		}
+	);
 
 	/*
 	$("#tutorialArea img").hide();

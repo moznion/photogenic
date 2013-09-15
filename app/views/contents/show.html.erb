@@ -12,7 +12,7 @@
   <%= image_tag @content.body %>
 </div>
 
-<div id="sns" class="clearFix">
+<div id="sns">
 	<p id="info">SNSで共有して、みんなに見てもらおう！</p>
 	<div id="snsButton">
 		<div id="twitter">
@@ -23,6 +23,9 @@
 		<div id="fb">
 			<div class="fb-like" data-href="https://www.facebook.com/groups/214521235364566/" data-width="450" data-layout="button_count" data-show-faces="true" data-send="true"></div>
 		</div><!-- /#fb -->
+		<div id="back" class="clearFix">
+			<%= link_to "TOPに戻る", :action=>"new" %>
+		</div><!-- /#back -->
 	</div><!-- /#snsButton -->
 </div><!-- /#sns -->
 <!--
