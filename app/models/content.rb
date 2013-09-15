@@ -24,7 +24,7 @@ class Content < ActiveRecord::Base
   end
 
   def check_file_size
-    if self.body_file_size > 1024 * 5
+    if self.body_file_size > 1024 * 1024 * 5
       errors.add(:content_size, "5MBを超えるファイルはアップロード出来ません")
     end
   end
