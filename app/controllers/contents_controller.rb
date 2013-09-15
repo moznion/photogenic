@@ -10,7 +10,7 @@ class ContentsController < ApplicationController
   # GET /contents/1
   # GET /contents/1.json
   def show
-    @content = Content.find(:first, conditions: {name: params[:id] << '.' << params[:format]})
+    @content = Content.find(:first, conditions: {name: params[:id]})
   end
 
   # GET /contents/new
@@ -28,10 +28,10 @@ class ContentsController < ApplicationController
     @content = Content.new(content_params)
 
     @content.last_accessed_at = @content.body_updated_at
-    @content.name             = @content.body.path.split('/')[-1]
+    @content.name             = @content.body.path.split('/')[-1].split('.')[0]
     respond_to do |format|
       if @content.save
-        format.html { render action: 'show' }
+        format.html { redirect_to action: 'show', id: @content.name }
         format.json { render action: 'show', status: :created, location: @content }
       else
         format.html { render action: 'new' }
