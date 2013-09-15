@@ -30,7 +30,9 @@ class ContentsController < ApplicationController
     @content = Content.new(content_params)
 
     @content.last_accessed_at = @content.body_updated_at
-    @content.name             = @content.body.path.split('/')[-1].split('.')[0]
+
+    (@content.name, @content.extension) = @content.body.path.split('/')[-1].split('.')
+
     respond_to do |format|
       if @content.save
         format.html { redirect_to action: 'show', id: @content.name }
