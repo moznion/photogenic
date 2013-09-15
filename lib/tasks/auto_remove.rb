@@ -6,13 +6,13 @@ class Tasks::AutoRemove
 
     Content.order('last_accessed_at DESC').each do |content|
       if out_dated_following
-        content.destroy
+        content.delete
         next
       end
 
       last_accessed_at_epoch = content.last_accessed_at.gmtime.to_i
       if now_epoch - last_accessed_at_epoch > delta_time_epoch
-        content.destroy
+        content.delete
         out_dated_following = true
       end
     end

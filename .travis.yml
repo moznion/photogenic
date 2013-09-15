@@ -1,0 +1,6 @@
+# http://about.travis-ci.org/docs/user/build-configuration/
+rvm:
+  - 2.0.0
+notifications:
+  email:
+    - moznion@gmail.com

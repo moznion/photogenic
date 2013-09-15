@@ -10,7 +10,6 @@ class Content < ActiveRecord::Base
     url:  "#{ActionController::Base.relative_url_root}/sys_img/:id_sha1.:extension"
   }
 
-  private
   def check_presence
     unless self.body_file_name
       errors.add(:content, "ファイルを指定してください")
