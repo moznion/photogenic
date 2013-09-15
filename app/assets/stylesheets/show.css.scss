@@ -13,7 +13,7 @@
 	margin: 0 auto;
 	height: 50px;
 	line-height: 50px;
-	padding: 70px;
+	padding-bottom: 70px;
 }
 #info{
 	text-align: center;
@@ -30,4 +30,28 @@
 	height: 100%;
 	float: left;
 	display: inline-block;
+}
+
+
+@media screen and (max-width: 600px) {
+	.image img{
+		box-shadow:0px 0px 5px rgba(0,0,0,0.5);
+		padding: 5%;
+		max-width: 90%;
+	}
+	#sns{
+		width: 96%;
+		margin: 0 2%;
+		height: auto !important;
+		line-height: normal !important;
+		padding-bottom: 70px;
+		text-align: center;
+	}
+	#info{
+		width: 100%
+	}
+	#snsButton{
+		margin: 0 auto;
+		display: inline-block;
+	}
 }
