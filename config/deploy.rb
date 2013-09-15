@@ -75,7 +75,7 @@ namespace :unicorn do
 
     eruby = Erubis::Eruby.load_file upstart_path
     put eruby.evaluate(project_name: application, stage: stage),
-        "/etc/init/#{application}.conf"
+        "/etc/init/#{application}.conf".strip
   end
 end
 
