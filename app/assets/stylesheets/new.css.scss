@@ -129,12 +129,21 @@
 		border-radius: 10px;
 		background: #ffa1a1;
 	}
+	#uploadSubmit{
+		-webkit-appearance: none;
+		width: 100%;
+	}
 	#error_explanation{
-		min-width: 100%;
+		max-width: 96%;
 		margin: 0 auto;
 		border:none !important;
 		border-radius: 10px !important;
-		background: #ffa1a1
+		background: #ffa1a1;
+	}
+	#error_explanation ul li{
+		height: 100%;
+
+		font-size: 10px !important;
 	}
 	#uploadArea{
 		min-height: 100%;
