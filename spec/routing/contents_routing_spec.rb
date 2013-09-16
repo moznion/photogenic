@@ -12,8 +12,8 @@ describe ContentsController do
         get("/contents/1").should route_to("contents#show", :id => "1")
       end
 
-      it "omitted" do
-        get("/1").should route_to("contents#show", :id => "1")
+      it "another path" do
+        get("/item/1").should route_to("contents#show", :id => "1")
       end
     end
 
