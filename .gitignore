@@ -17,5 +17,5 @@
 
 /public/assets/*
 /public/system
-!/piblic/resource/.git_keep
-/public/resource/*
+!/piblic/raw/.git_keep
+/public/raw/*
