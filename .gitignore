@@ -18,3 +18,4 @@
 /public/assets/*
 /public/system
 !/piblic/item/.git_keep
+/public/item/*
