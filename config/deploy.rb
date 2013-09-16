@@ -148,6 +148,28 @@ DESC
   before "deploy:assets:precompile", "deploy:db:symlink"
 end
 
+namespace :uploads do
+  desc 'Creates the upload folders unless they exist and set permissions'
+  task :setup, :expect => { :no_release => true } do
+    dirs = uploads_dirs.map { |d| File.join(shared_path, d) }
+    run "mkdir -p #{dirs.join(' ')} && chmod g+w #{dirs.join(' ')}"
+  end
+
+  desc 'Creates symlinks'
+  task :symlink, :expect => { :no_release => true } do
+    run "rm -rf  #{release_path}/public/item"
+    run "ln -nfs #{shared_path}/item #{release_path}/public/item"
+  end
+
+  desc 'initialize'
+  task :register_dirs do
+    set :uploads_dirs, %w(item)
+  end
+
+  after       "deploy:finalize_update", "uploads:symlink"
+  on :start,  "uploads:register_dirs"
+end
+
 namespace :deploy do
   task :start, :roles => :app do
     run "sudo restart #{application} || sudo start #{application}"
