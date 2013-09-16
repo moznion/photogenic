@@ -7,8 +7,14 @@ describe ContentsController do
       get("/contents/new").should route_to("contents#new")
     end
 
-    it "routes to #show" do
-      get("/contents/1").should route_to("contents#show", :id => "1")
+    context "routes to #show" do
+      it "full path" do
+        get("/contents/1").should route_to("contents#show", :id => "1")
+      end
+
+      it "omitted" do
+        get("/1").should route_to("contents#show", :id => "1")
+      end
     end
 
     it "routes to #create" do
