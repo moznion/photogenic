@@ -15,5 +15,6 @@
 /log/*.log
 /tmp
 
-/public/sys_img/
 /public/assets/*
+/public/system
+!/piblic/item/.git_keep
