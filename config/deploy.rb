@@ -157,13 +157,13 @@ namespace :uploads do
 
   desc 'Creates symlinks'
   task :symlink, :expect => { :no_release => true } do
-    run "rm -rf  #{release_path}/public/item"
-    run "ln -nfs #{shared_path}/item #{release_path}/public/item"
+    run "rm -rf  #{release_path}/public/resource"
+    run "ln -nfs #{shared_path}/resource #{release_path}/public/resource"
   end
 
   desc 'initialize'
   task :register_dirs do
-    set :uploads_dirs, %w(item)
+    set :uploads_dirs, %w(resource)
   end
 
   after       "deploy:finalize_update", "uploads:symlink"

@@ -6,8 +6,8 @@ class Content < ActiveRecord::Base
   validate :check_file_size
 
   has_attached_file :body, {
-    path: ":rails_root/public/item/:id_sha1.:extension",
-    url:  "#{ActionController::Base.relative_url_root}/item/:id_sha1.:extension"
+    path: ":rails_root/public/resource/:id_sha1.:extension",
+    url:  "#{ActionController::Base.relative_url_root}/resource/:id_sha1.:extension"
   }
 
   def check_presence
