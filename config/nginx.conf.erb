@@ -3,8 +3,10 @@ upstream <%= @project_name %> {
 }
 
 server {
-  listen 80; # every.sh use default_server setting.
+  listen 3000; # every.sh use default_server setting.
   server_name localhost;
+
+  client_max_body_size 6M;
 
   root /u/apps/<%= @project_name %>/current;
   error_log /u/apps/<%= @project_name %>/shared/log/nginx_error.log;
